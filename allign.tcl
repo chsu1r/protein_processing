@@ -13,7 +13,7 @@ proc allign {molid} {
   set I [draw principalaxes $sel]
   set A [orient $sel [lindex $I 1] {0 1 0}]
   $sel move $A
-  #set I [draw principalaxes $sel]
+  set I [draw principalaxes $sel]
   mol reanalyze $molid
   puts "Changed"
   unset sel

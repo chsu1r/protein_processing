@@ -15,7 +15,7 @@ proc end2end {molid} {
     $sel frame $i 
     $sel update
     mol ssrecalc $pos
-    set distance [measure bond {5 1000} $sel]
+    set distance [measure bond {4788 3202} $sel]
     puts $log "$i $distance"
     }
 

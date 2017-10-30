@@ -1,4 +1,4 @@
-proc twist {molid str_1 str_2 str_3} {
+proc twistsection {molid str_1 str_2 str_3} {
     
     # source allign.tcl
     # allign $molid
@@ -10,10 +10,10 @@ proc twist {molid str_1 str_2 str_3} {
     set first 0
     set second ""
 
-    set log [open twist.txt w]
+    set log [open twist_sec.txt w]
 
-    for {set i 0} {$i < 60} {incr i 1} {
-    # for {set i 0} {$i < 72} {incr i 1} {}
+    #for {set i 32} {$i < 40} {incr i 1} {}
+    for {set i 32} {$i < 41} {incr i 1} {
         set x_1 0
         set x_2 0
         set x_3 0
@@ -31,12 +31,12 @@ proc twist {molid str_1 str_2 str_3} {
                 set st $str_3
             }
             if {$st == 0 || $st == 3 || $st == 4 || $st == 5 || $st == 8 || $st == 9 || $st == 10 || $st == 13 || $st == 14 } {
-                set first [expr 60 * $st]
-                # set first [expr 72 * $st]
+                # set first [expr 60 * $st]
+                set first [expr 72 * $st]
                 set input "protein and residue [expr $first + $i] and name CA"
             } else {
-                set first [expr 60 * $st + 59]
-                #set first [expr 72 * $st + 71]
+                # set first [expr 60 * $st + 59]
+                set first [expr 72 * $st + 71]
                 set input "protein and residue [expr $first - $i] and name CA"
             }
             set sel [atomselect $molid $input]

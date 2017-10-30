@@ -1,16 +1,16 @@
 proc avg_filter {mol_id} {
     for {set i 0} {$i < 15} {incr i 1} {  
         puts "$i" 
-        # for {set j 3} {$j <= 59} {incr j 1} {}
-        #     set a [atomselect $mol_id "residue [expr $i*60 + $j] and name CA"]
-        #     set b [atomselect $mol_id "residue [expr $i*60 + $j-1] and name CA"]
-        #     set c [atomselect $mol_id "residue [expr $i*60 + $j-2] and name CA"]
-        #     set d [atomselect $mol_id "residue [expr $i*60 + $j-3] and name CA"]
-        for {set j 3} {$j <= 71} {incr j 1} {
-            set a [atomselect $mol_id "residue [expr $i*72 + $j] and name CA"]
-            set b [atomselect $mol_id "residue [expr $i*72 + $j-1] and name CA"]
-            set c [atomselect $mol_id "residue [expr $i*72 + $j-2] and name CA"]
-            set d [atomselect $mol_id "residue [expr $i*72 + $j-3] and name CA"]
+        for {set j 3} {$j <= 59} {incr j 1} {
+            set a [atomselect $mol_id "residue [expr $i*60 + $j] and name CA"]
+            set b [atomselect $mol_id "residue [expr $i*60 + $j-1] and name CA"]
+            set c [atomselect $mol_id "residue [expr $i*60 + $j-2] and name CA"]
+            set d [atomselect $mol_id "residue [expr $i*60 + $j-3] and name CA"]
+        # for {set j 3} {$j <= 71} {incr j 1} {}
+        #     set a [atomselect $mol_id "residue [expr $i*72 + $j] and name CA"]
+        #     set b [atomselect $mol_id "residue [expr $i*72 + $j-1] and name CA"]
+        #     set c [atomselect $mol_id "residue [expr $i*72 + $j-2] and name CA"]
+        #     set d [atomselect $mol_id "residue [expr $i*72 + $j-3] and name CA"]
 
             set n [$a get x]
             set o [$b get x]

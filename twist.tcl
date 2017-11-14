@@ -36,7 +36,7 @@ proc twist {molid str_1 str_2 str_3} {
                 set input "protein and residue [expr $first + $i] and name CA"
             } else {
                 set first [expr 60 * $st + 59]
-                #set first [expr 72 * $st + 71]
+                # set first [expr 72 * $st + 71]
                 set input "protein and residue [expr $first - $i] and name CA"
             }
             set sel [atomselect $molid $input]

@@ -11,10 +11,9 @@ proc perc {molid} {
     set PROselhelix [[atomselect $pos "resname PRO and helix and name CA"] num]
     
     set log [open MaSp2_PRO_stats.txt w]
-
     puts $log "Coil   sheet   turn   helix"
     
-    puts $log "[expr $PROselcoil/$sel] [expr $PROselsheet/$sel] [expr $PROselturn/$sel] [expr $PROselhelix/$sel]"
+    puts $log "[expr $PROselcoil*1.0/$sel] [expr $PROselsheet*1.0/$sel] [expr $PROselturn*1.0/$sel] [expr $PROselhelix*1.0/$sel]"
     flush $log
 }
 
